@@ -81,7 +81,6 @@
         }
 
         .container {
-            background-color: #fdfdfd;
             align-items: center;
             border-radius: 20px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -91,7 +90,15 @@
             flex-direction: column;
             height: 100vh;
             width: 100%;
+        }
 
+        .container-interno {
+            background-color: #fdfdfd;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 300px;
         }
     </style>
 </head>
@@ -111,8 +118,10 @@
 <body>
     <div class="container">
 
+        <div class="container-interno">
+            <div id="api"></div>
+        </div>
 
-        <div id="api"></div>
     </div>
 
 
