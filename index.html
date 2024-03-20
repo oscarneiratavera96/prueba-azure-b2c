@@ -139,7 +139,15 @@
     }
 
     // Llamar a la función para hacer la llamada a la API cuando la página cargue
-    llamarAPI();
+    // llamarAPI();
+
+
+    // Agregar un listener de eventos al botón
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('emailVerificationControl_but_send_code').addEventListener('click', function () {
+            llamarAPI();
+        });
+    });
 </script>
 
 <body>
