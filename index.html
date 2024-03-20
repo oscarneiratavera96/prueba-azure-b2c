@@ -118,7 +118,29 @@
     });
 </script>
 
+<script>
+    // Función para hacer la llamada a la API
+    function llamarAPI() {
+        // URL de la API de CoinGecko para obtener el precio de Bitcoin
+        var apiUrl = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd';
 
+        // Realizar la petición GET a la API utilizando Fetch API
+        fetch(apiUrl)
+            .then(response => response.json()) // Convertir la respuesta a JSON
+            .then(data => {
+                // Manejar la respuesta de la API
+                let precioBitcoin = data.bitcoin.usd;
+                console.log(precioBitcoin)
+            })
+            .catch(error => {
+                // Manejar errores
+                console.error('Error al llamar a la API:', error);
+            });
+    }
+
+    // Llamar a la función para hacer la llamada a la API cuando la página cargue
+    llamarAPI();
+</script>
 
 <body>
     <div class="container">
